@@ -1,15 +1,13 @@
 %define upstream_name    Module-Install-AuthorRequires
-%define upstream_version 0.02
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	0.02
+Release:	7
 
 Summary:	Declare author-only dependencies
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Module-Install-AuthorRequires
-Source0:	https://cpan.metacpan.org/authors/id/F/FL/FLORA/Module-Install-AuthorRequires-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/F/FL/FLORA/Module-Install-AuthorRequires-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -31,7 +29,7 @@ authors have all optional modules installed.
 an easy way to achieve the above would be something like:
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
